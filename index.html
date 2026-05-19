@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Galeria dos Tênis</title>
+
+  <!-- Tailwind para o design -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <meta name="description" content="Galeria dos Tênis — selecione seus tênis favoritos. Loja moderna e responsiva." />
+</head>
+<body class="site bg-gray-50 text-gray-800 antialiased">
+
+  <!-- CABEÇALHO -->
+  <header class="cabecalho bg-white shadow-sm">
+    <div class="container-cabecalho max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="area-topo flex justify-between items-center py-4">
+        <a href="#" class="logo flex items-center gap-3">
+          <div class="icone-logo w-10 h-10 bg-blue-600 rounded-md flex items-center justify-center text-white font-bold">GT</div>
+          <div class="texto-logo">
+            <h1 class="titulo-logo text-lg font-semibold leading-none">Galeria dos Tênis</h1>
+            <p class="subtitulo-logo text-xs text-gray-500 -mt-0.5">Calçados com estilo</p>
+          </div>
+        </a>
+
+        <nav class="menu-principal hidden md:flex items-center gap-6">
+          <a href="#" class="link-menu text-sm hover:text-blue-600">Início</a>
+          <a href="#produtos" class="link-menu text-sm hover:text-blue-600">Produtos</a>
+          <a href="#" class="link-menu text-sm hover:text-blue-600">Contato</a>
+        </nav>
+
+        <div class="acoes-topo flex items-center gap-3">
+          <button id="botaoBusca" class="botao-busca hidden md:inline-flex items-center gap-2 px-3 py-2 border rounded-md text-sm hover:bg-gray-100">
+            🔍 Buscar
+          </button>
+          <a href="#" class="botao-carrinho inline-flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-md text-sm shadow-sm hover:bg-blue-700">Carrinho</a>
+        </div>
+
+        <!-- botão menu mobile -->
+        <button id="botaoMenu" class="botao-menu md:hidden ml-3">
+          <svg class="icone-menu w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- menu mobile -->
+    <div id="menuMobile" class="menu-mobile md:hidden hidden border-t">
+      <div class="links-mobile px-4 py-3 space-y-2">
+        <a href="#" class="link-mobile block">Início</a>
+        <a href="#produtos" class="link-mobile block">Produtos</a>
+        <a href="#" class="link-mobile block">Contato</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- SEÇÃO PRINCIPAL -->
+  <section class="secao-principal bg-gradient-to-r from-blue-50 to-white">
+    <div class="container-principal max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      <div class="conteudo-principal grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <div class="texto-principal">
+          <h2 class="titulo-principal text-3xl font-extrabold text-gray-900">Encontre o par perfeito</h2>
+          <p class="descricao-principal mt-4 text-gray-600">Tênis com design, conforto e preços acessíveis. Veja nossa seleção e escolha o seu favorito.</p>
+          <div class="botoes-principais mt-6 flex gap-3">
+            <a href="#produtos" class="botao-produtos inline-flex items-center px-5 py-3 bg-blue-600 text-white rounded-md shadow hover:bg-blue-700">Ver produtos</a>
+            <a href="#" class="botao-ofertas inline-flex items-center px-5 py-3 border rounded-md text-sm hover:bg-gray-50">Ofertas</a>
+          </div>
+        </div>
+        <div class="imagem-principal hidden md:flex justify-center">
+          <img src="img/tenis1.jpg" alt="Tênis destaque" class="w-80 rounded-lg shadow-lg object-cover" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUTOS -->
+  <main id="produtos" class="secao-produtos max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    <div class="cabecalho-produtos flex items-center justify-between mb-6">
+      <h3 class="titulo-produtos text-xl font-semibold">Produtos em destaque</h3>
+      <div class="info-produtos text-sm text-gray-500">Mostrando <span class="font-medium">6</span> produtos</div>
+    </div>
+
+    <section class="lista-produtos grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- Produto 1 -->
+      <article class="card-produto bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition">
+        <div class="imagem-produto aspect-w-16 aspect-h-12 bg-gray-100">
+          <img src="img/tenis1.jpg" alt="Tênis 1" class="w-full h-full object-cover"/>
+        </div>
+        <div class="conteudo-produto p-4">
+          <h4 class="nome-produto font-semibold">Tênis 1</h4>
+          <p class="descricao-produto mt-2 text-sm text-gray-600">Sola antiderrapante e design confortável.</p>
+          <div class="rodape-produto mt-4 flex items-center justify-between">
+            <div class="preco-produto text-lg font-bold text-blue-600">R$ 129,99</div>
+            <div class="acoes-produto flex items-center gap-2">
+              <button class="botaoVer px-3 py-2 text-sm border rounded-md hover:bg-gray-50"
+                      data-img="img/tenis1.jpg" data-nome="Tênis 1" data-preco="129,99">Ver</button>
+              <button class="botaoComprar px-3 py-2 bg-blue-600 text-white rounded-md text-sm hover:bg-blue-700">Comprar</button>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Produto 2 -->
+      <article class="card-produto bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition">
+        <div class="imagem-produto aspect-w-16 aspect-h-12 bg-gray-100">
+          <img src="img/tenis2.jpg" alt="Tênis 2" class="w-full h-full object-cover"/>
+        </div>
+        <div class="conteudo-produto p-4">
+          <h4 class="nome-produto font-semibold">Tênis 2</h4>
+          <p class="descricao-produto mt-2 text-sm text-gray-600">Estilo urbano e ótimo custo-benefício.</p>
+          <div class="rodape-produto mt-4 flex items-center justify-between">
+            <div class="preco-produto text-lg font-bold text-blue-600">R$ 129,99</div>
+            <div class="acoes-produto flex items-center gap-2">
+              <button class="botaoVer px-3 py-2 text-sm border rounded-md hover:bg-gray-50"
+                      data-img="img/tenis2.jpg" data-nome="Tênis 2" data-preco="129,99">Ver</button>
+              <button class="botaoComprar px-3 py-2 bg-blue-600 text-white rounded-md text-sm hover:bg-blue-700">Comprar</button>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Produto 3 -->
+      <article class="card-produto bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition">
+        <div class="imagem-produto aspect-w-16 aspect-h-12 bg-gray-100">
+          <img src="img/tenis3.jpg" alt="Tênis 3" class="w-full h-full object-cover"/>
+        </div>
+        <div class="conteudo-produto p-4">
+          <h4 class="nome-produto font-semibold">Tênis 3</h4>
+          <p class="descricao-produto mt-2 text-sm text-gray-600">Design leve e respirável.</p>
+          <div class="rodape-produto mt-4 flex items-center justify-between">
+            <div class="preco-produto text-lg font-bold text-blue-600">R$ 129,99</div>
+            <div class="acoes-produto flex items-center gap-2">
+              <button class="botaoVer px-3 py-2 text-sm border rounded-md hover:bg-gray-50"
+                      data-img="img/tenis3.jpg" data-nome="Tênis 3" data-preco="129,99">Ver</button>
+              <button class="botaoComprar px-3 py-2 bg-blue-600 text-white rounded-md text-sm hover:bg-blue-700">Comprar</button>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Produto 4 -->
+      <article class="card-produto bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition">
+        <div class="imagem-produto aspect-w-16 aspect-h-12 bg-gray-100">
+          <img src="img/tenis4.jpg" alt="Tênis 4" class="w-full h-full object-cover"/>
+        </div>
+        <div class="conteudo-produto p-4">
+          <h4 class="nome-produto font-semibold">Tênis 4</h4>
+          <p class="descricao-produto mt-2 text-sm text-gray-600">Clássico e versátil.</p>
+          <div class="rodape-produto mt-4 flex items-center justify-between">
+            <div class="preco-produto text-lg font-bold text-blue-600">R$ 129,99</div>
+            <div class="acoes-produto flex items-center gap-2">
+              <button class="botaoVer px-3 py-2 text-sm border rounded-md hover:bg-gray-50"
+                      data-img="img/tenis4.jpg" data-nome="Tênis 4" data-preco="129,99">Ver</button>
+              <button class="botaoComprar px-3 py-2 bg-blue-600 text-white rounded-md text-sm hover:bg-blue-700">Comprar</button>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Produto 5 -->
+      <article class="card-produto bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition">
+        <div class="imagem-produto aspect-w-16 aspect-h-12 bg-gray-100">
+          <img src="img/tenis5.jpg" alt="Tênis 5" class="w-full h-full object-cover"/>
+        </div>
+        <div class="conteudo-produto p-4">
+          <h4 class="nome-produto font-semibold">Tênis 5</h4>
+          <p class="descricao-produto mt-2 text-sm text-gray-600">Confortável e leve para o dia a dia.</p>
+          <div class="rodape-produto mt-4 flex items-center justify-between">
+            <div class="preco-produto text-lg font-bold text-blue-600">R$ 129,99</div>
+            <div class="acoes-produto flex items-center gap-2">
+              <button class="botaoVer px-3 py-2 text-sm border rounded-md hover:bg-gray-50"
+                      data-img="img/tenis5.jpg" data-nome="Tênis 5" data-preco="129,99">Ver</button>
+              <button class="botaoComprar px-3 py-2 bg-blue-600 text-white rounded-md text-sm hover:bg-blue-700">Comprar</button>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Produto 6 -->
+      <article class="card-produto bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition">
+        <div class="imagem-produto aspect-w-16 aspect-h-12 bg-gray-100">
+          <img src="img/tenis6.jpg" alt="Tênis 6" class="w-full h-full object-cover"/>
+        </div>
+        <div class="conteudo-produto p-4">
+          <h4 class="nome-produto font-semibold">Tênis 6</h4>
+          <p class="descricao-produto mt-2 text-sm text-gray-600">Leve e estiloso — ótimo para presente.</p>
+          <div class="rodape-produto mt-4 flex items-center justify-between">
+            <div class="preco-produto text-lg font-bold text-blue-600">R$ 129,99</div>
+            <div class="acoes-produto flex items-center gap-2">
+              <button class="botaoVer px-3 py-2 text-sm border rounded-md hover:bg-gray-50"
+                      data-img="img/tenis6.jpg" data-nome="Tênis 6" data-preco="129,99">Ver</button>
+              <button class="botaoComprar px-3 py-2 bg-blue-600 text-white rounded-md text-sm hover:bg-blue-700">Comprar</button>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </section>
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer class="rodape bg-white border-t">
+    <div class="container-rodape max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col md:flex-row justify-between items-center gap-4">
+      <div class="texto-rodape text-sm text-gray-600">© Galeria dos Tênis 2024 — Todos os direitos reservados</div>
+      <div class="contato-rodape text-sm text-gray-600">Suporte: contato@galeriadostenis.example</div>
+    </div>
+  </footer>
+
+  <!-- JANELA DE PRODUTO -->
+  <div id="janelaProduto" class="janela-produto fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+    <div class="conteudo-janela bg-white rounded-lg max-w-3xl w-full mx-4 overflow-hidden">
+      <div class="topo-janela flex justify-between items-start p-4 border-b">
+        <div class="info-janela">
+          <h3 id="tituloProduto" class="text-lg font-semibold"></h3>
+          <p id="precoProduto" class="text-blue-600 font-bold mt-1"></p>
+        </div>
+        <button id="fecharJanela" class="botao-fechar text-gray-500 hover:text-gray-700">✕</button>
+      </div>
+      <div class="corpo-janela p-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+        <img id="imagemProduto" src="" alt="produto" class="imagem-grande w-full h-64 object-cover rounded">
+        <div class="detalhes-produto">
+          <p id="descricaoProduto" class="text-gray-600">Descrição do produto.</p>
+          <div class="opcoes-tamanho mt-6">
+            <label class="text-sm text-gray-700">Tamanho</label>
+            <div class="tamanhos mt-2 flex gap-2">
+              <button class="px-3 py-2 border rounded-md text-sm">38</button>
+              <button class="px-3 py-2 border rounded-md text-sm">39</button>
+              <button class="px-3 py-2 border rounded-md text-sm">40</button>
+            </div>
+          </div>
+          <div class="acoes-janela mt-6 flex gap-3">
+            <button id="adicionarCarrinho" class="botao-adicionar bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700">Adicionar ao carrinho</button>
+            <button id="fecharBotao" class="botao-cancelar px-4 py-2 border rounded-md">Fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script>
+    // Menu mobile
+    const botaoMenu = document.getElementById('botaoMenu');
+    const menuMobile = document.getElementById('menuMobile');
+    botaoMenu.addEventListener('click', () => menuMobile.classList.toggle('hidden'));
+
+    // Janela de produto
+    const botoesVer = document.querySelectorAll('.botaoVer');
+    const janelaProduto = document.getElementById('janelaProduto');
+    const imagemProduto = document.getElementById('imagemProduto');
+    const tituloProduto = document.getElementById('tituloProduto');
+    const precoProduto = document.getElementById('precoProduto');
+    const descricaoProduto = document.getElementById('descricaoProduto');
+    const fecharJanela = document.getElementById('fecharJanela');
+    const fecharBotao = document.getElementById('fecharBotao');
+
+    botoesVer.forEach(botao => {
+      botao.addEventListener('click', () => {
+        imagemProduto.src = botao.dataset.img;
+        tituloProduto.textContent = botao.dataset.nome;
+        precoProduto.textContent = 'R$ ' + botao.dataset.preco;
+        descricaoProduto.textContent = 'Produto confortável, durável e com ótimo acabamento.';
+        janelaProduto.classList.remove('hidden');
+        janelaProduto.classList.add('flex');
+      });
+    });
+
+    // Fechar janela
+    [fecharJanela, fecharBotao].forEach(botao => {
+      botao.addEventListener('click', () => {
+        janelaProduto.classList.add('hidden');
+        janelaProduto.classList.remove('flex');
+      });
+    });
+
+    // Fechar ao clicar fora
+    janelaProduto.addEventListener('click', (e) => {
+      if (e.target === janelaProduto) {
+        janelaProduto.classList.add('hidden');
+        janelaProduto.classList.remove('flex');
+      }
+    });
+  </script>
+
+</body>
+</html>
