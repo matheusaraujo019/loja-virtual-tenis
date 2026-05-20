@@ -40,7 +40,7 @@ Por ser um projeto puramente Front-end, você não precisa de nenhum servidor lo
 
 | Interface Principal da Loja |
 | :---: |
-| ![Vitrine da Galeria dos Tênis](img/loja.jpg) |
+| ![Vitrine da Galeria dos Tênis](img/loja.png) |
 
 ---
 
