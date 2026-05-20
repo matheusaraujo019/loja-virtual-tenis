@@ -59,6 +59,3 @@ Matheus Araujo da Silva
 Este projeto está sob a licença MIT.
 
 
----
-
-Desenvolvido com 💻 por [Seu Nome Completo] — Conecte-se comigo no [LinkedIn](SEU_LINK_DO_LINKEDIN).
